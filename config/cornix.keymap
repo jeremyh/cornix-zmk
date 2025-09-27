@@ -51,7 +51,7 @@
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <200>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
         };
@@ -64,7 +64,7 @@
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            require-prior-idle-ms = <200>;
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
         };
@@ -190,10 +190,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB  &kp V                 &kp L         &kp N         &kp D                &kp K                    &kp J      &kp W                &kp O            &kp U         &kp Q          &kp ENTER
-&kp ESC  &hm_l LCTRL T         &hm_l LALT S  &hm_l LGUI R  &hm_shift_l LSHFT H  &kp F                    &kp G      &hm_shift_r RSHFT C  &hm_r RGUI A     &hm_r RALT I  &hm_r RCTRL E  &kp SEMICOLON
-&mo 4    &hm_l LGUI SEMICOLON  &kp Z         &kp X         &kp P                &kp B      &none  &none  &kp M      &kp Y                &kp PERIOD       &kp COMMA     &kp FSLH       &kp BACKSPACE
-&none    &none                 &mo 4         &lt 6 ESCAPE  &mo 2                &lt 3 SQT                &kp ENTER  &mo 2                &lt 2 BACKSPACE  &none         &none          &none
+&kp TAB         &kp V                 &kp L         &kp N         &kp D        &kp K                    &kp J      &kp W        &kp O          &kp U         &kp Q          &kp ENTER
+&kp ESC         &hm_l LCTRL T         &hm_l LALT S  &hm_l LGUI R  &kp H        &kp F                    &kp G      &kp C        &hm_r RGUI A   &hm_r RALT I  &hm_r RCTRL E  &kp SEMICOLON
+&sk LEFT_SHIFT  &hm_l LGUI SEMICOLON  &kp Z         &kp X         &kp P        &kp B      &none  &none  &kp M      &kp Y        &kp PERIOD     &kp COMMA     &kp FSLH       &sk RIGHT_SHIFT
+&none           &none                 &mo 4         &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &kp ENTER  &lt 2 SPACE  &kp BACKSPACE  &none         &none          &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
