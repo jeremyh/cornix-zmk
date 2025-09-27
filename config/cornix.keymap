@@ -218,10 +218,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE      &kp V          &kp L             &kp N         &kp D        &kp K                    &kp J      &kp W        &kp O              &kp U              &kp Q          &kp ENTER
-&kp TAB         &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G      &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z             &kp X         &kp P        &kp B      &none  &none  &kp M      &kp Y        &kp PERIOD         &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
-&none           &none          &mo 4             &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &kp ENTER  &lt 2 SPACE  &kp BACKSPACE      &none              &none          &key_repeat
+&kp ESCAPE      &kp V          &kp L             &kp N         &kp D        &kp K                    &kp J           &kp W        &kp O              &kp U              &kp Q          &kp ENTER
+&kp TAB         &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G           &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z             &kp X         &kp P        &kp B      &none  &none  &kp M           &kp Y        &kp PERIOD         &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
+&none           &none          &mo 4             &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &lt 3 C_REPEAT  &lt 2 SPACE  &kp BACKSPACE      &none              &none          &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
