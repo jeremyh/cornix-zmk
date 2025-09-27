@@ -131,7 +131,7 @@
 
             flavor = "hold-preferred";
             tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <160>;
         };
     };
 
@@ -173,6 +173,34 @@
         layer4 {
             bindings = <&kp N4>;
             key-positions = <5 6>;
+        };
+
+        c_que {
+            bindings = <&que>;
+            key-positions = <10 22>;
+            layers = <0>;
+        };
+
+        c_qui {
+            bindings = <&qui>;
+            key-positions = <10 21>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        que: que {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp U &kp E>;
+            label = "QUE";
+        };
+
+        qui: qui {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp U &kp I>;
+            label = "QUI";
         };
     };
 
