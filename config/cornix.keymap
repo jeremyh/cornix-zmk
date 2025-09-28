@@ -221,7 +221,7 @@
 &kp ESCAPE      &kp V          &kp L             &kp N         &kp D        &kp K                    &kp J           &kp W        &kp O              &kp U              &kp Q          &kp ENTER
 &kp TAB         &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G           &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
 &sk LEFT_SHIFT  &kp SEMICOLON  &kp Z             &kp X         &kp P        &kp B      &to 8  &none  &kp M           &kp Y        &kp PERIOD         &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
-&none           &lt 4 LCMD     &mo 4             &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &lt 3 C_REPEAT  &lt 2 SPACE  &kp BACKSPACE      &none              &none          &key_repeat
+&none           &lt 4 LCMD     &mo 4             &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &lt 3 C_REPEAT  &lt 2 SPACE  &kp BACKSPACE      &none              &mo 4          &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -301,7 +301,7 @@
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                       &none   &none  &none   &none  &none             &none
 &none           &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                      &tog 1  &to 0  &none   &none  &none             &tog 1
-&bt BT_CLR_ALL  &none          &none          &none          &none          &none          &sys_reset  &trans  &none   &none  &none   &none  &ext_power EP_ON  &kp CAPSLOCK
+&bt BT_CLR_ALL  &kp A          &none          &none          &none          &none          &sys_reset  &trans  &none   &none  &none   &none  &ext_power EP_ON  &kp CAPSLOCK
 &none           &none          &none          &none          &none          &none                              &none   &none  &kp N4  &none  &none             &none
             >;
         };
