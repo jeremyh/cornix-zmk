@@ -212,7 +212,7 @@
 
             bindings = <
 &kp TAB         &kp V          &kp L             &kp N         &kp D        &kp K                    &kp J  &kp W        &kp O              &kp U              &kp Q          &kp ENTER
-&none           &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G  &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
+&kp TAB         &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G  &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
 &sk LEFT_SHIFT  &kp SEMICOLON  &kp Z             &kp X         &kp P        &kp B      &to 8  &none  &kp M  &kp Y        &kp PERIOD         &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
 &none           &none          &mo 4             &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &mo 3  &lt 2 SPACE  &lt 2 BACKSPACE    &none              &mo 4          &key_repeat
             >;
@@ -252,10 +252,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none  &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &kp PIPE
-&none  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &kp EQUAL  &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
-&none  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &kp FSLH   &kp QUESTION        &kp GRAVE           &kp TILDE            &kp SQT        &none
-&none  &none             &none           &none                 &trans                 &trans                          &kp TILDE  &trans              &kp GRAVE           &none                &none          &none
+&none           &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &kp PIPE
+&none           &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &kp EQUAL  &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
+&sk LEFT_SHIFT  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &kp FSLH   &kp QUESTION        &kp GRAVE           &kp TILDE            &kp SQT        &sk RIGHT_SHIFT
+&none           &none             &none           &none                 &trans                 &trans                          &kp TILDE  &trans              &kp GRAVE           &none                &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -272,10 +272,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &kp F6    &kp F7     &kp F8         &kp F9    &kp F10  &kp F11
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &kp BSPC  &kp MINUS  &kp EQUAL      &kp PLUS  &kp DQT  &kp F12
-&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB   &kp INS    &kp HOME       &kp END   &trans   &trans
-&none   &none         &none         &kp TAB       &trans        &trans                        &trans    &trans     &kp BACKSPACE  &none     &none    &none
+&trans          &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &kp F6    &kp F7     &kp F8         &kp F9    &kp F10  &kp F11
+&trans          &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &kp BSPC  &kp MINUS  &kp EQUAL      &kp PLUS  &kp DQT  &kp F12
+&sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB   &kp INS    &kp HOME       &kp END   &trans   &sk RIGHT_SHIFT
+&none           &none         &none         &kp TAB       &trans        &trans                        &trans    &trans     &kp BACKSPACE  &none     &none    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -340,7 +340,7 @@
         no_hrm {
             display-name = "Base";
             bindings = <
-&kp ESCAPE      &kp V          &kp L  &kp N         &kp D        &kp K                    &kp J           &kp W        &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp V          &kp L  &kp N         &kp D        &kp K                    &kp J           &kp W        &kp O          &kp U      &kp Q     &kp ENTER
 &kp TAB         &kp T          &kp S  &kp R         &kp H        &kp F                    &kp G           &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
 &sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X         &kp P        &kp B      &to 0  &none  &kp M           &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
 &none           &lt 4 LCMD     &mo 4  &lt 6 ESCAPE  &lt 2 SPACE  &lt 3 SQT                &lt 3 C_REPEAT  &lt 2 SPACE  &kp BACKSPACE  &none      &none     &key_repeat
