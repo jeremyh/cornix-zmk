@@ -178,6 +178,30 @@
             key-positions = <10 21>;
             layers = <0>;
         };
+
+        quick_lcmd {
+            bindings = <&sk LCMD>;
+            key-positions = <43 15>;
+            layers = <0>;
+        };
+
+        quick_rcmd {
+            bindings = <&sk RGUI>;
+            key-positions = <20 44>;
+            layers = <0>;
+        };
+
+        quick_lopt {
+            bindings = <&sk LALT>;
+            key-positions = <43 14>;
+            layers = <0>;
+        };
+
+        quick_lctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <43 13>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -210,10 +234,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB         &kp V          &kp L             &kp N         &kp D        &kp K                    &kp J  &kp W        &kp O              &kp U              &kp Q          &kp ENTER
-&kp TAB         &hm_l LCTRL T  &hm_l LEFT_GUI S  &hm_l LALT R  &kp H        &kp F                    &kp G  &kp C        &hm_r RIGHT_ALT A  &hm_r RIGHT_GUI I  &hm_r RCTRL E  &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z             &kp X         &kp P        &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD         &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
-&none           &none          &mo 3             &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE      &none              &mo 3          &key_repeat
+&kp TAB         &kp V          &kp L  &kp N         &kp D        &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp T          &kp S  &kp R         &kp H        &kp F                    &kp G  &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X         &kp P        &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
+&none           &none          &mo 3  &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none      &mo 3     &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
