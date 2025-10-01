@@ -171,37 +171,37 @@
 
         quick_lcmd {
             bindings = <&sk LCMD>;
-            key-positions = <43 14>;
+            key-positions = <14 41>;
             layers = <0>;
         };
 
         quick_rcmd {
             bindings = <&sk RGUI>;
-            key-positions = <44 21>;
+            key-positions = <21 46>;
             layers = <0>;
         };
 
         quick_lopt {
             bindings = <&sk LALT>;
-            key-positions = <43 15>;
+            key-positions = <15 41>;
             layers = <0>;
         };
 
         quick_lctrl {
             bindings = <&sk LCTRL>;
-            key-positions = <43 13>;
+            key-positions = <13 41>;
             layers = <0>;
         };
 
         quick_ropt {
             bindings = <&sk RIGHT_ALT>;
-            key-positions = <20 44>;
+            key-positions = <20 46>;
             layers = <0>;
         };
 
         quick_rctrl {
             bindings = <&sk LCTRL>;
-            key-positions = <22 44>;
+            key-positions = <22 46>;
             layers = <0>;
         };
     };
@@ -236,10 +236,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB         &kp V          &kp L  &kp N         &kp D        &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
-&kp TAB         &kp T          &kp S  &kp R         &kp H        &kp F                    &kp G  &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X         &kp P        &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
-&none           &none          &mo 3  &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none      &mo 3     &key_repeat
+&kp TAB         &kp V          &kp L  &kp N       &kp D        &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp T          &kp S  &kp R       &kp H        &kp F                    &kp G  &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X       &kp P        &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
+&none           &none          &mo 3  &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none      &mo 3     &key_repeat
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -260,7 +260,7 @@
 &none           &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &kp PIPE
 &none           &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &kp EQUAL  &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
 &sk LEFT_SHIFT  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &kp FSLH   &kp QUESTION        &kp GRAVE           &kp TILDE            &kp SQT        &sk RIGHT_SHIFT
-&none           &none             &none           &none                 &trans                 &trans                          &kp TILDE  &trans              &kp GRAVE           &none                &none          &none
+&none           &none             &none           &none                 &trans                 &none                           &none      &trans              &kp BACKSPACE       &none                &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -305,12 +305,12 @@
         };
 
         no_hrm {
-            display-name = "Base";
+            display-name = "nohrm";
             bindings = <
-&kp TAB         &kp V          &kp L  &kp N         &kp D        &kp K                    &kp J           &kp W      &kp O          &kp U      &kp Q     &kp ENTER
-&kp TAB         &kp T          &kp S  &kp R         &kp H        &kp F                    &kp G           &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X         &kp P        &kp B      &to 0  &none  &kp M           &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
-&none           &lt 3 LCMD     &mo 3  &lt 5 ESCAPE  &lt 1 SPACE  &lt 2 SQT                &lt 2 C_REPEAT  &kp SPACE  &kp BACKSPACE  &none      &none     &key_repeat
+&kp TAB         &kp V          &kp L  &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp T          &kp S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
+&none           &none          &mo 3  &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none      &none     &key_repeat
             >;
 
             sensor-bindings =
