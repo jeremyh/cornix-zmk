@@ -153,18 +153,8 @@
 
         cb_enter {
             bindings = <&kp RET>;
-            key-positions = <21 19>;
+            key-positions = <7 9>;
             layers = <0>;
-        };
-
-        layer3 {
-            bindings = <&kp N3>;
-            key-positions = <5 6>;
-        };
-
-        layer4 {
-            bindings = <&kp N4>;
-            key-positions = <5 6>;
         };
 
         c_que {
@@ -181,25 +171,37 @@
 
         quick_lcmd {
             bindings = <&sk LCMD>;
-            key-positions = <43 15>;
+            key-positions = <43 14>;
             layers = <0>;
         };
 
         quick_rcmd {
             bindings = <&sk RGUI>;
-            key-positions = <20 44>;
+            key-positions = <44 21>;
             layers = <0>;
         };
 
         quick_lopt {
             bindings = <&sk LALT>;
-            key-positions = <43 14>;
+            key-positions = <43 15>;
             layers = <0>;
         };
 
         quick_lctrl {
             bindings = <&sk LCTRL>;
             key-positions = <43 13>;
+            layers = <0>;
+        };
+
+        quick_ropt {
+            bindings = <&sk RIGHT_ALT>;
+            key-positions = <20 44>;
+            layers = <0>;
+        };
+
+        quick_rctrl {
+            bindings = <&sk LCTRL>;
+            key-positions = <22 44>;
             layers = <0>;
         };
     };
