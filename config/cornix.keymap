@@ -142,67 +142,67 @@
         cb_ltm {
             bindings = <&kp ESC>;
             key-positions = <2 4>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         cb_lm {
             bindings = <&kp TAB>;
             key-positions = <14 16>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         cb_enter {
             bindings = <&kp RET>;
             key-positions = <7 9>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         c_que {
             bindings = <&que>;
             key-positions = <10 22>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         c_qui {
             bindings = <&qui>;
             key-positions = <10 21>;
-            layers = <0>;
+            layers = <0 4>;
         };
 
         quick_lcmd {
             bindings = <&sk LCMD>;
             key-positions = <14 42>;
-            layers = <0>;
+            layers = <1 2>;
         };
 
         quick_rcmd {
             bindings = <&sk RGUI>;
             key-positions = <21 46>;
-            layers = <0>;
+            layers = <1 2>;
         };
 
         quick_lopt {
             bindings = <&sk LALT>;
             key-positions = <15 42>;
-            layers = <0>;
+            layers = <2 1>;
         };
 
         quick_lctrl {
             bindings = <&sk LCTRL>;
             key-positions = <13 42>;
-            layers = <0>;
+            layers = <1 2>;
         };
 
         quick_ropt {
             bindings = <&sk RIGHT_ALT>;
             key-positions = <20 46>;
-            layers = <0>;
+            layers = <1 2>;
         };
 
         quick_rctrl {
             bindings = <&sk LCTRL>;
             key-positions = <22 46>;
-            layers = <0>;
+            layers = <1 2>;
         };
     };
 
@@ -236,10 +236,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE      &kp V          &kp L  &kp N  &kp D  &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
-&kp TAB         &kp T          &kp S  &kp R  &kp H  &kp F                    &kp G  &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X  &kp P  &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
-&none           &none          &mo 3  &none  &mo 1  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none      &mo 3     &key_repeat
+&kp ESCAPE      &kp V          &kp L         &kp N         &kp D  &kp K                    &kp J  &kp W        &kp O          &kp U         &kp Q          &kp ENTER
+&kp TAB         &hm_l LCTRL T  &hm_l LCMD S  &hm_l LALT R  &kp H  &kp F                    &kp G  &kp C        &hm_r RALT A   &hm_r RCMD I  &hm_r RCTRL E  &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z         &kp X         &kp P  &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA     &kp FSLH       &sk RIGHT_SHIFT
+&none           &none          &mo 3         &none         &mo 1  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none         &mo 3          &key_repeat
             >;
 
             sensor-bindings =
@@ -269,7 +269,7 @@
         };
 
         Numbers {
-            display-name = "Mix";
+            display-name = "Numbers";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -309,10 +309,10 @@
         no_hrm {
             display-name = "nohrm";
             bindings = <
-&kp TAB         &kp V          &kp L         &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U         &kp Q          &kp ENTER
-&kp TAB         &hm_l LCTRL T  &hm_l LCMD S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &hm_r RCMD I  &hm_r RCTRL E  &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z         &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA     &kp FSLH       &sk RIGHT_SHIFT
-&none           &none          &mo 3         &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none         &none          &key_repeat
+&kp TAB         &kp V          &kp L  &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp T          &kp S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
+&none           &none          &mo 3  &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none      &none     &key_repeat
             >;
 
             sensor-bindings =
