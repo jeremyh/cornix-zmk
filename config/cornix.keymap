@@ -279,10 +279,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp KP_DOT      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &kp F6    &kp F7     &kp F8         &kp F9    &kp F10  &kp F11
-&kp PERCENT     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &kp BSPC  &kp MINUS  &kp EQUAL      &kp PLUS  &kp DQT  &kp F12
-&sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB   &kp INS    &kp HOME       &kp END   &trans   &sk RIGHT_SHIFT
-&none           &none         &none         &kp TAB       &trans        &trans                        &trans    &trans     &kp BACKSPACE  &none     &none    &none
+&kp KP_DOT      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &none    &none    &none          &none    &none  &none
+&kp PERCENT     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &none    &none    &none          &none    &none  &none
+&sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB  &kp INS  &kp HOME       &kp END  &none  &sk RIGHT_SHIFT
+&none           &none         &none         &kp TAB       &trans        &trans                        &trans   &trans   &kp BACKSPACE  &none    &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
