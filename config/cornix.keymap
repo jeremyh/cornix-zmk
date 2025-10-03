@@ -48,10 +48,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <300>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_R KEYS_T 6 18 32 33 19 7 8 34 20 9 21 35 36 22 10 11 23 37 49 48 47 45 44 46 7 19 33 46>;
             hold-trigger-on-release;
         };
 
@@ -93,10 +93,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <KEYS_L KEYS_T 5 17 29 28 16 4 3 15 27 14 2 25 13 1 26 24 12 0 41 42 43 40 38 39>;
 
             // for quick tapping; shift+~
 
@@ -236,7 +236,7 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB         &kp V          &kp L  &kp N  &kp D  &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
+&kp ESCAPE      &kp V          &kp L  &kp N  &kp D  &kp K                    &kp J  &kp W        &kp O          &kp U      &kp Q     &kp ENTER
 &kp TAB         &kp T          &kp S  &kp R  &kp H  &kp F                    &kp G  &kp C        &kp A          &kp I      &kp E     &kp SEMICOLON
 &sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X  &kp P  &kp B      &to 4  &none  &kp M  &kp Y        &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
 &none           &none          &mo 3  &none  &mo 1  &lt 2 SQT                &mo 2  &lt 1 SPACE  &kp BACKSPACE  &none      &mo 3     &key_repeat
@@ -259,10 +259,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none           &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &kp PIPE
-&none           &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &kp EQUAL  &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
-&sk LEFT_SHIFT  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &kp FSLH   &kp QUESTION        &kp GRAVE           &kp TILDE            &kp SQT        &sk RIGHT_SHIFT
-&none           &none             &none           &none                 &trans                 &none                           &none      &trans              &kp BACKSPACE       &none                &none          &none
+&none           &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &none
+&kp PIPE        &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &none      &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
+&sk LEFT_SHIFT  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &none      &kp AT_SIGN         &none               &kp TILDE            &none          &sk RIGHT_SHIFT
+&none           &none             &none           &kp TAB               &trans                 &none                           &none      &trans              &kp BACKSPACE       &none                &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -279,8 +279,8 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans          &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &kp F6    &kp F7     &kp F8         &kp F9    &kp F10  &kp F11
-&trans          &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &kp BSPC  &kp MINUS  &kp EQUAL      &kp PLUS  &kp DQT  &kp F12
+&kp KP_DOT      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &kp F6    &kp F7     &kp F8         &kp F9    &kp F10  &kp F11
+&kp PERCENT     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &kp BSPC  &kp MINUS  &kp EQUAL      &kp PLUS  &kp DQT  &kp F12
 &sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB   &kp INS    &kp HOME       &kp END   &trans   &sk RIGHT_SHIFT
 &none           &none         &none         &kp TAB       &trans        &trans                        &trans    &trans     &kp BACKSPACE  &none     &none    &none
             >;
@@ -309,10 +309,10 @@
         no_hrm {
             display-name = "nohrm";
             bindings = <
-&kp TAB         &kp V          &kp L  &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U      &kp Q     &kp ENTER
-&kp TAB         &kp T          &kp S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
-&none           &none          &mo 3  &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none      &none     &key_repeat
+&kp TAB         &kp V          &kp L         &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U         &kp Q          &kp ENTER
+&kp TAB         &hm_l LCTRL T  &hm_l LCMD S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &hm_r RCMD I  &hm_r RCTRL E  &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z         &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA     &kp FSLH       &sk RIGHT_SHIFT
+&none           &none          &mo 3         &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none         &none          &key_repeat
             >;
 
             sensor-bindings =
