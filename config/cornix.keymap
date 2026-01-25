@@ -206,10 +206,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE      &kp V          &kp L         &kp N         &kp D  &kp K                    &kp J  &kp W      &kp O          &kp U         &kp Q          &kp ENTER
-&kp TAB         &hm_l LCTRL T  &hm_l LCMD S  &hm_l LALT R  &kp H  &kp F                    &kp G  &kp C      &hm_r RALT A   &hm_r RCMD I  &hm_r RCTRL E  &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z         &kp X         &kp P  &kp B      &to 4  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA     &kp FSLH       &sk RIGHT_SHIFT
-&none           &none          &mo 3         &none         &mo 1  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none         &mo 3          &key_repeat
+&kp ESCAPE        &kp V          &kp L             &kp N         &kp D  &kp K                    &kp J  &kp W      &kp O          &kp U              &kp Q          &kp ENTER
+&kp TAB           &hm_l LCTRL T  &hm_l LCMD S      &hm_l LALT R  &kp H  &kp F                    &kp G  &kp C      &hm_r RALT A   &hm_r RCMD I       &hm_r RCTRL E  &kp SEMICOLON
+&sk LEFT_SHIFT    &kp SEMICOLON  &kp Z             &kp X         &kp P  &kp B      &to 4  &to 5  &kp M  &kp Y      &kp PERIOD     &kp COMMA          &kp FSLH       &sk RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_ALT   &kp LEFT_COMMAND  &mo 3         &mo 1  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &key_repeat
             >;
 
             sensor-bindings =
@@ -232,10 +232,12 @@
 &none           &kp GRAVE         &kp AMPERSAND   &kp EXCLAMATION       &kp ASTERISK           &kp PLUS                        &kp CARET  &kp LG(LEFT_ARROW)  &kp LA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RG(RIGHT)  &none
 &kp PIPE        &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS              &kp EQUAL                       &none      &kp LEFT            &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT      &kp LA(BACKSPACE)
 &sk LEFT_SHIFT  &kp HASH          &kp RBKT        &kp RIGHT_BRACE       &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans  &trans  &none      &kp AT_SIGN         &none               &kp TILDE            &none          &sk RIGHT_SHIFT
-&none           &none             &none           &kp TAB               &trans                 &none                           &none      &trans              &kp BACKSPACE       &none                &none          &none
+&trans          &trans            &trans          &kp TAB               &trans                 &none                           &none      &trans              &kp BACKSPACE       &trans               &trans         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         Numbers {
@@ -249,13 +251,36 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp KP_DOT      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &none    &none    &none          &none    &none  &none
-&kp PERCENT     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &none    &none    &none          &none    &none  &none
-&sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB  &kp INS  &kp HOME       &kp END  &none  &sk RIGHT_SHIFT
-&none           &none         &none         &kp TAB       &trans        &trans                        &trans   &trans   &kp BACKSPACE  &none    &none  &none
+&kp KP_DOT      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                  &none    &none    &none          &none    &none   &none
+&kp PERCENT     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                  &none    &none    &none          &none    &none   &none
+&sk LEFT_SHIFT  &kp LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)     &kp DOLLAR    &trans  &trans  &kp TAB  &kp INS  &kp HOME       &kp END  &none   &sk RIGHT_SHIFT
+&trans          &trans        &trans        &kp TAB       &trans        &trans                        &trans   &trans   &kp BACKSPACE  &trans   &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        FKeys {
+            bindings = <
+&trans  &kp F10  &kp F11  &kp F12  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5   &kp F6   &kp F7   &kp F8  &kp F9                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &kp F1   &kp F2   &kp F3  &kp F4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans   &trans   &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        no_hrm {
+            display-name = "nohrm";
+            bindings = <
+&kp ESCAPE      &kp V          &kp L   &kp N  &kp D  &kp K                     &kp J  &kp W      &kp O          &kp U      &kp Q     &kp ENTER
+&kp TAB         &kp T          &kp S   &kp R  &kp H  &kp F                     &kp G  &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
+&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z   &kp X  &kp P  &kp B      &to 0  &trans  &kp M  &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
+&trans          &trans         &trans  &mo 3  &mo 1  &lt 2 SQT                 &mo 2  &kp SPACE  &kp BACKSPACE  &trans     &trans    &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         Adjustments {
@@ -269,33 +294,10 @@
             //                    |         |         |         |         |         | |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                       &none  &none  &none   &none  &none             &none
-&none           &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                      &none  &to 0  &none   &none  &none             &none
-&bt BT_CLR_ALL  &none          &none          &none          &none          &none          &sys_reset  &trans  &none  &none  &none   &none  &ext_power EP_ON  &kp CAPSLOCK
-&none           &none          &none          &none          &none          &none                              &none  &none  &kp N4  &none  &none             &none
-            >;
-        };
-
-        no_hrm {
-            display-name = "nohrm";
-            bindings = <
-&kp TAB         &kp V          &kp L  &kp N       &kp D        &kp K                    &kp J  &kp W      &kp O          &kp U      &kp Q     &kp ENTER
-&kp TAB         &kp T          &kp S  &kp R       &kp H        &kp F                    &kp G  &kp C      &kp A          &kp I      &kp E     &kp SEMICOLON
-&sk LEFT_SHIFT  &kp SEMICOLON  &kp Z  &kp X       &kp P        &kp B      &to 0  &none  &kp M  &kp Y      &kp PERIOD     &kp COMMA  &kp FSLH  &sk RIGHT_SHIFT
-&none           &none          &mo 3  &kp ESCAPE  &lt 1 SPACE  &lt 2 SQT                &mo 2  &kp SPACE  &kp BACKSPACE  &none      &none     &key_repeat
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp PG_UP PG_DN>;
-        };
-
-        FKeys {
-            bindings = <
-&trans  &kp F10  &kp F11  &kp F12  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F5   &kp F6   &kp F7   &kp F8  &kp F9                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &kp F1   &kp F2   &kp F3  &kp F4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                      &none  &none  &none   &none  &none             &none
+&none           &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                     &none  &none  &none   &none  &none             &none
+&bt BT_CLR_ALL  &none          &none          &none          &none          &none          &sys_reset  &to 0  &none  &none  &none   &none  &ext_power EP_ON  &kp CAPSLOCK
+&trans          &trans         &none          &none          &none          &none                             &none  &none  &kp N4  &none  &none             &none
             >;
         };
     };
