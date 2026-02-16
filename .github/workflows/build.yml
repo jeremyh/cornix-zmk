@@ -10,4 +10,4 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@5cfc67a33402b24ab893b8d71cef1af2a869adbb
